@@ -98,7 +98,7 @@ nav a {
     display: flex;
     align-items: center;
     border: solid 2px #F2F2F2;
-    width: 30%;
+    width: 25%;
     margin-top: 23px;
     border-radius: 14px;
 }
@@ -760,7 +760,6 @@ footer {
 
     .search {
         margin-top: 30px;
-        border: 1px solid grey;
         border-radius: 18px;
         width: 100%;
     }
