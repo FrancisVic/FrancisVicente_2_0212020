@@ -19,49 +19,44 @@ body, html {
     max-width: 2000px;
 }
 
-.logo
-{
+.logo {
     display: flex;
     align-items: center;
+    flex-basis: 60%;
+    order: 0;
 }
 
 .logoImg {
-    height: 70px;
+    height: 55px;
 }
 
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: flex-end;
+.header a {
+    color: #0065FC;
+    font-weight: 500;
 }
-
-nav a {
-    text-decoration: none;
-    border-top: 3px solid transparent;
-    margin-left: 60px;
-    color: #007bff;
-}
-
 
 a {
     text-decoration: none;
     color: black;
 }
 
-
-
 .signup {
-    margin-left: 700px;
+    padding-top: 33px;
+    order: 1;
 }
 
 .hebergement {
+    border-top: 3px solid #0065FC;
     margin-left: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 33px;
 }
 
 .icon-position {
@@ -119,12 +114,12 @@ a {
     justify-content: space-between;
 }
 
+.activity_link
+{
+    padding-top: 33px;
+}
 .activity h2 {
     margin-left: 30px;
-}
-
-.activity_link:hover {
-    border-top: 3px solid #0065FC;
 }
 
 .title {
@@ -164,8 +159,9 @@ button {
     background-color: #DEEBFF;
 }
 
-.filter h3 {
-    font-size: 15px;
+.filter span {
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .icon-menu {
@@ -176,8 +172,7 @@ button {
     border-radius: 20px;
 }
 
-.icon-menu:hover
-{
+.icon-menu:hover {
     background-color: #DEEBFF;
     transition: 0.5s;
     height: 50px;
@@ -444,12 +439,21 @@ footer {
     border: 2px solid #F2F2F2;
     margin-right: 10px;
     margin-bottom: 20px;
+    padding-right: 7px;
 }
 
 @media screen and (max-width: 576px) {
-
-    .signup
-    {
+    .header {
+        padding: 20px;
+    }
+    .header a {
+        text-align: center;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 14px;
+    }
+    .signup {
         margin: 0px;
     }
     #containerGeneral {
@@ -472,8 +476,16 @@ footer {
     nav a {
         color: #0065FC;
     }
-    .activity {
-        font-size: 18px;
+    .hebergement {
+        border-bottom: 3px solid #007bff;
+        order: 2;
+        width: 50%;
+        border-top: none;
+    }
+    .activity_link {
+        width: 50%;
+        order: 3;
+        border-bottom: 3px solid rgba(204, 204, 204, 0.514);
     }
     .link {
         border: none;
@@ -487,13 +499,14 @@ footer {
         margin-top: 20px;
         margin-left: 20px;
     }
-    .filter h3 {
-        font-size: 13px;
+    .filter span {
+        font-size: 17px;
     }
     .filter-child {
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
+        margin: 0px;
     }
     #site-search {
         height: 50px;
@@ -671,20 +684,14 @@ footer {
         justify-content: center;
     }
     .header {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
-    nav {
-        justify-content: center;
+    .hebergement {
+        padding-right: 0px;
+        padding-left: 0px;
     }
-
-    nav a
-    {
-        padding: 0px;
-    }
-    .link {
-        padding: 0px;
-    }
-    .signup {
+    .signup a {
+        padding-top: 33px;
         padding: 0px;
     }
     .filter {
@@ -696,6 +703,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
+        margin-left: 0px;
     }
     .filter-child h4 {
         font-size: 13px;
@@ -715,9 +723,6 @@ footer {
     #site-search input {
         height: 50px;
         font-size: 20px;
-    }
-    .subTitle {
-        margin-left: 20px;
     }
     .button-search {
         display: none;
@@ -749,8 +754,6 @@ footer {
     }
     .title {
         font-size: 18px;
-        margin-left: 20px;
-        margin-right: 30px;
     }
     .search span {
         font-size: 20px;
@@ -774,13 +777,10 @@ footer {
         height: 263px;
     }
     .logo {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        width: 70px;
     }
-    .logoImg {
+    .logo img {
         object-fit: contain;
-        width: 100px;
         margin-right: 110px;
     }
     header a {
