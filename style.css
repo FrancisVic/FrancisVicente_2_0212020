@@ -27,7 +27,7 @@ body, html {
 }
 
 .logoImg {
-    height: 55px;
+    height: 40px;
 }
 
 .header {
@@ -443,8 +443,10 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
-    .header {
-        padding: 20px;
+
+    .header
+    {
+        padding-top: 15px;
     }
     .header a {
         text-align: center;
@@ -579,9 +581,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 100px;
+        flex-basis: 35%;
     }
-    .logoImg {
+    .logo img {
         object-fit: contain;
         width: 100%;
         margin: 0px;
@@ -777,11 +779,13 @@ footer {
         height: 263px;
     }
     .logo {
-        width: 70px;
+        flex-basis: 40%;
+        
     }
-    .logo img {
+    .logoImg img {
         object-fit: contain;
         margin-right: 110px;
+        width: 100%;
     }
     header a {
         font-size: 30px;
